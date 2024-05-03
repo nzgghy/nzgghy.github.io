@@ -1,88 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>在线接广告</title>
+    <title>内职 广告</title>
     <style>
         body {
-            font-family: Arial, sans-serif; /* Sets the font family for the entire document */
-            margin: 0; /* Removes default margin */
-            padding: 0; /* Removes default padding */
-            display: flex; /* Uses flexbox layout */
-            justify-content: center; /* Centers content horizontally */
-            align-items: center; /* Centers content vertically */
-            height: 100vh; /* Sets the height of the body to 100% of the viewport height */
-            background-image: url('background1.jpg'); /* Sets background image */
-            background-size: cover; /* Covers the entire background with the image */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('2.jpg');
+            background-size: cover;
         }
 
         .login-container {
-            background-color: rgba(255, 255, 255, 0.8); /* Sets background color with opacity */
-            border-radius: 8px; /* Rounds corners of the container */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a shadow effect */
-            padding: 20px; /* Adds padding inside the container */
-            width: 300px; /* Sets the width of the container */
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 300px; /* 调整手机端的最大宽度 */
+            margin: auto; /* 水平居中容器 */
         }
 
         #login-title {
-            font-size: 24px; /* Sets font size */
-            margin-bottom: 20px; /* Adds margin bottom */
-            text-align: center; /* Centers text horizontally */
-            color: red; /* Sets text color */
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: red;
         }
 
         input[type="text"],
-        input[type="password"] {
-            width: 100%; /* Sets the width of text input fields */
-            padding: 10px; /* Adds padding inside text input fields */
-            margin-bottom: 15px; /* Adds margin bottom to create space between input fields */
-            border: 1px solid #ccc; /* Sets border color and style */
-            border-radius: 5px; /* Rounds corners of the input fields */
-            box-sizing: border-box; /* Includes padding and border in the width */
+        input[type="password"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
 
         input[type="submit"] {
-            width: 100%; /* Sets the width of the submit button */
-            padding: 10px; /* Adds padding inside the button */
-            border: none; /* Removes border */
-            border-radius: 5px; /* Rounds corners of the button */
-            background-color: #0078d7; /* Sets background color of the button */
-            color: #fff; /* Sets text color of the button */
-            font-size: 16px; /* Sets font size of the button text */
-            cursor: pointer; /* Changes cursor to pointer on hover */
+            background-color: #0078d7;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
         }
 
         input[type="submit"]:hover {
-            background-color: #005fba; /* Changes background color on hover */
+            background-color: #005fba;
         }
 
         #register-link {
-            text-align: center; /* Centers text horizontally */
-            margin-top: 10px; /* Adds margin top */
+            text-align: center;
+            margin-top: 10px;
         }
 
         #register-link a {
-            color: #0078d7; /* Sets text color of the registration link */
-            text-decoration: none; /* Removes underline from the link */
+            color: orange;
+            text-decoration: none;
         }
 
         #register-link a:hover {
-            text-decoration: underline; /* Underlines the link on hover */
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="login-container">
-        <h1 id="login-title">小 广告</h1>
+        <h1 id="login-title">内职 广告</h1>
         <form>
             <input type="text" id="username" placeholder="账号：" pattern="(?=.*[A-Za-z])(?=.*\d).{8,}" title="请输入8个字符，至少有一个英文字母和数字" required>
-            <input type="password" id="password" placeholder="密码：" placeholder="Password" pattern="[A-Za-z0-9]{8,}" title="请输入8个字符，数字或英文字母"required>
+            <input type="password" id="password" placeholder="密码：" pattern="[A-Za-z0-9]{8,}" title="请输入8个字符，数字或英文字母" required>
             <input type="submit" value="登录">
         </form>
         <div id="register-link">
-            没有账户? <a href="#">注册</a>
+            没有账户? <a href="https://mydewang.github.io/zhuce/">注册</a>
         </div>
     </div>
+    <script>
+        document.querySelector("form").addEventListener("submit", function(event) {
+            event.preventDefault(); // 阻止默认的表单提交行为
+            window.location.href = "https://mydewang.github.io/gg/"; // 跳转到指定链接
+        });
+    </script>
 </body>
 </html>
